@@ -1,0 +1,128 @@
+:root {
+  --bg: #f6f5f2;
+  --text: #1f2937;
+  --primary: #7c5a3b;
+  --surface: #ffffff;
+  --muted: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+}
+
+.hero {
+  background: linear-gradient(140deg, #f5eee4, #f0f6f6);
+  padding: 4rem 0;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin: 0.5rem 0;
+}
+
+.hero-content p {
+  max-width: 62ch;
+  color: var(--muted);
+}
+
+.badge {
+  background: #ede3d5;
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.actions {
+  margin: 1.25rem 0;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 0;
+  padding: 0.7rem 1rem;
+  border-radius: 0.8rem;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.ghost {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.section {
+  padding: 1rem 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.cards {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.card,
+.feature-card {
+  background: var(--surface);
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid #ece8e1;
+}
+
+.meta {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+}
+
+.feature-alt {
+  background: #faf8f4;
+  padding: 2.5rem 0;
+}
+
+.feature-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.roadmap {
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 1.2rem;
+}
+
+li::marker {
+  color: var(--primary);
+  font-weight: 700;
+}
